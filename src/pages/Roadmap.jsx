@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { careerData } from "../data/careerData";
+import { resources } from "../data/resources";
 import { getTrackProgress, saveTrackProgress } from "../trackStorage";
 import Navbar from "../Navbar";
 
@@ -151,6 +152,8 @@ function Roadmap() {
           const statusLabel =
             getStatusLabel(step);
 
+          const stepResources =
+           resources[step] || [];
           return (
             <div
               className={`roadmap-step ${
@@ -233,6 +236,40 @@ function Roadmap() {
                       "Continue building your skills and apply them through projects."}
                   </p>
                 </div>
+
+                {!locked && stepResources.length > 0 && (
+                  <div className="learning-resources">
+                    <div className="resources-title">
+                      <span>📚</span>
+                      <h4>Learning Resources</h4>
+                    </div>
+
+                    <div className="resources-list">
+                      {stepResources.map((resource) => (
+                        <a
+                          key={resource.title}
+                          href={resource.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="resource-card"
+                        >
+                          <span className="resource-type">
+                            {resource.type}
+                          </span>
+
+                          <span className="resource-name">
+                            {resource.title}
+                          </span>
+
+                          <span className="resource-arrow">
+                            ↗
+                          </span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
 
                 {!locked && (
                   <button

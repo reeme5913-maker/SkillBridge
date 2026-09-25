@@ -35,6 +35,26 @@ function CareerGoal() {
       description: "Create applications for mobile devices.",
       icon: "📱",
     },
+    {
+      title: "AI Engineer",
+      description: "Build intelligent systems and AI-powered applications.",
+      icon: "🤖",
+    },
+    {
+      title: "Data Scientist",
+      description: "Analyze data and build predictive models.",
+      icon: "🧠",
+    },
+    {
+      title: "DevOps Engineer",
+      description: "Build, deploy, and maintain reliable software systems.",
+      icon: "🚀",
+    },
+    {
+      title: "Cloud Engineer",
+      description: "Design and manage scalable cloud infrastructure.",
+      icon: "☁️",
+    },
   ];
 
 const chooseCareer = (career) => {

@@ -2718,3 +2718,71 @@ footer span {
     font-size: 13px;
   }
 }
+
+/* Learning Resources */
+
+.learning-resources {
+  margin-top: 22px;
+  padding: 18px;
+  background: #f4f8fa;
+  border: 1px solid #dce8ed;
+  border-radius: 14px;
+}
+
+.resources-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.resources-title span {
+  font-size: 18px;
+}
+
+.resources-title h4 {
+  margin: 0;
+  color: #26343d;
+  font-size: 15px;
+}
+
+.resources-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 14px;
+  background: #ffffff;
+  border: 1px solid #dce8ed;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.resource-card:hover {
+  border-color: #5f91a8;
+  transform: translateY(-2px);
+}
+
+.resource-type {
+  font-size: 11px;
+  font-weight: 600;
+  color: #5f91a8;
+  text-transform: uppercase;
+}
+
+.resource-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #26343d;
+}
+
+.resource-arrow {
+  font-size: 15px;
+  color: #315b70;
+}
